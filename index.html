@@ -5,260 +5,174 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Newroz 2026 | Private Celebration</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-
 <style>
-:root {
-    --bg-color: #0a0c0b;
-    --surface-color: #161a18;
-    --primary-gold: #c5a059;
-    --text-main: #e0e0e0;
-    --text-dim: #a0a0a0;
-}
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-main);
-    line-height: 1.6;
-    overflow-x: hidden;
+  font-family: 'Georgia', serif;
+  background: #000;
+  color: #fff;
 }
 
-/* ===== HERO SECTION ===== */
+/* HERO SECTION */
 
-header {
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    padding-bottom: 120px;
-    overflow: hidden;
-    border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2070&auto=format&fit=crop') center center / cover no-repeat;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 140px;
+  position: relative;
+  text-align: center;
 }
 
-/* Flame Layer */
-header::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-        radial-gradient(circle at 50% 100%, rgba(255,120,0,0.6) 0%, rgba(255,60,0,0.45) 20%, rgba(10,12,11,0.95) 60%),
-        linear-gradient(to top, #ff6a00 0%, #ff3c00 20%, #0a0c0b 75%);
-    animation: flameMove 5s infinite alternate ease-in-out;
-    z-index: 0;
-}
-
-@keyframes flameMove {
-    0% { transform: translateY(0px) scale(1); }
-    100% { transform: translateY(-20px) scale(1.05); }
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.85));
 }
 
 .hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 900px;
-    padding: 0 20px;
+  position: relative;
+  z-index: 2;
 }
 
-.hero-date {
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    color: var(--text-dim);
-    margin-bottom: 15px;
+.hero small {
+  letter-spacing: 4px;
+  font-size: 14px;
+  opacity: 0.8;
 }
 
-h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2.8rem, 6vw, 4.5rem);
-    color: var(--primary-gold);
-    margin-bottom: 15px;
-    letter-spacing: 3px;
-    text-shadow: 0 0 20px rgba(255, 120, 0, 0.4);
+.hero h1 {
+  font-size: 72px;
+  font-weight: 500;
+  margin: 20px 0;
+  color: #d4af37;
 }
 
-.hero-sub {
-    font-style: italic;
-    color: var(--text-dim);
-    letter-spacing: 1px;
+.hero p {
+  font-style: italic;
+  font-size: 20px;
+  opacity: 0.9;
 }
 
-/* ===== LAYOUT ===== */
+/* CONTENT SECTION */
 
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
+.section {
+  padding: 100px 10%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  background: #0b0b0b;
 }
 
-section {
-    padding: 80px 0;
+.left {
+  flex: 1;
+  min-width: 300px;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 50px;
+.left h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #d4af37;
 }
 
-@media (max-width: 768px) {
-    .grid { grid-template-columns: 1fr; }
-    header { height: 75vh; padding-bottom: 80px; }
+.left p {
+  line-height: 1.7;
+  font-size: 18px;
+  opacity: 0.9;
 }
 
-h2 {
-    font-family: 'Playfair Display', serif;
-    color: var(--primary-gold);
-    margin-bottom: 25px;
-    font-size: 1.9rem;
+.right {
+  flex: 1;
+  min-width: 300px;
+  background: #121212;
+  padding: 40px;
+  border: 1px solid #222;
 }
 
-.card {
-    background: var(--surface-color);
-    padding: 40px;
-    border-radius: 4px;
-    border: 1px solid rgba(197,160,89,0.15);
+.right h3 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #d4af37;
 }
 
-.details-list {
-    list-style: none;
+.detail {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 18px;
 }
 
-.details-list li {
-    margin-bottom: 18px;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-    padding-bottom: 8px;
-}
-
-.details-list span {
-    color: var(--text-dim);
-}
-
-.cta-container {
-    margin-top: 30px;
-}
-
-.btn {
-    display: block;
-    background-color: var(--primary-gold);
-    color: #000;
-    padding: 16px;
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 1px;
-    transition: 0.3s ease;
-    text-align: center;
-}
-
-.btn:hover {
-    background-color: #d4b475;
-    transform: translateY(-2px);
-}
-
-/* ===== POLICY ===== */
-
-.policy-section {
-    font-size: 0.95rem;
-    color: var(--text-dim);
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    background: rgba(255,255,255,0.02);
-    padding: 50px;
-    border-radius: 4px;
-}
-
-/* ===== FOOTER ===== */
+/* FOOTER */
 
 footer {
-    padding: 60px 0;
-    text-align: center;
-    font-size: 0.9rem;
-    color: var(--text-dim);
-    border-top: 1px solid rgba(255,255,255,0.05);
-}
-
-.contact-link {
-    color: var(--primary-gold);
-    text-decoration: none;
-    font-weight: 600;
+  text-align: center;
+  padding: 60px 20px;
+  background: #000;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #d4af37;
 }
 </style>
-</head>
 
+</head>
 <body>
 
-<header>
-    <div class="hero-content">
-        <p class="hero-date">London • 21 March 2026</p>
-        <h1>Newroz 2026</h1>
-        <p class="hero-sub">A Private Cultural Celebration</p>
-    </div>
-</header>
-
-<div class="container">
-
-<section>
-    <div class="grid">
-        <div>
-            <h2>The Celebration</h2>
-            <p>
-                Welcome the arrival of Spring at our private Newroz gathering. 
-                Held at the historic <strong>Notting Hill Arts Club</strong>, 
-                this evening is dedicated to community, tradition, and halparke zor (bussing it down).
-            </p>
-            <br>
-            <p>
-                To maintain an intimate and safe environment, admission is strictly limited 
-                to pre-registered guests.
-            </p>
-            <br>
-            <p><strong>For inquiries:</strong> +44 7725 861101</p>
-        </div>
-
-        <div class="card">
-            <h2>Event Details</h2>
-            <ul class="details-list">
-                <li><span>Date</span> <strong>Saturday, 21 March</strong></li>
-                <li><span>Venue</span> <strong>Notting Hill Arts Club</strong></li>
-                <li><span>Hours</span> <strong>20:00 — 02:00</strong></li>
-                <li><span>Admission</span> <strong>£25.00 GBP</strong></li>
-            </ul>
-
-            <div class="cta-container">
-                <a href="#" class="btn">Secure Ticket</a>
-            </div>
-        </div>
-    </div>
+<section class="hero">
+  <div class="hero-content">
+    <small>LONDON • 21 MARCH 2026</small>
+    <h1>Newroz 2026</h1>
+    <p>A Private Cultural Celebration</p>
+  </div>
 </section>
 
-<section class="policy-section">
-    <h2 style="font-size:1.4rem;">Terms of Purchase</h2>
-    <p><strong>General Admission:</strong> This ticket grants entry for one person to the Newroz 2026 private event. Tickets are delivered digitally via email upon successful checkout.</p>
-    <br>
-    <p><strong>Refund Policy:</strong> All ticket sales are final and non-refundable. Refunds will only be processed if the event is cancelled in its entirety by the organisers.</p>
-    <br>
-    <p><strong>Event Entry:</strong> Organisers reserve the right to refuse entry to ensure the safety of our guests. Please have your digital confirmation ready at the door.</p>
-</section>
+<section class="section">
+  <div class="left">
+    <h2>The Celebration</h2>
+    <p>
+      Welcome the arrival of Spring at our private Newroz gathering.
+      Held at the historic Notting Hill Arts Club, this evening is
+      dedicated to community, tradition, and halparke zor.
+    </p>
+    <p style="margin-top:20px;">
+      To maintain an intimate and safe environment, admission is strictly limited to pre-registered guests.
+    </p>
+  </div>
 
-</div>
+  <div class="right">
+    <h3>Event Details</h3>
+
+    <div class="detail">
+      <span>Date</span>
+      <strong>Saturday, 21 March</strong>
+    </div>
+
+    <div class="detail">
+      <span>Venue</span>
+      <strong>Notting Hill Arts Club</strong>
+    </div>
+
+    <div class="detail">
+      <span>Hours</span>
+      <strong>20:00 — 02:00</strong>
+    </div>
+
+    <div class="detail">
+      <span>Admission</span>
+      <strong>£25 GBP</strong>
+    </div>
+  </div>
+</section>
 
 <footer>
-    <p>For inquiries: <span class="contact-link">+44 7725 861101</span></p>
-    <p style="margin-top:15px; opacity:0.6;">&copy; 2026 Newroz Celebration. All rights reserved.</p>
+  Enquiries: +44 7725 861101
 </footer>
 
 </body>
