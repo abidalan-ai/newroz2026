@@ -92,4 +92,127 @@
             font-family: 'Playfair Display', serif;
             color: var(--primary-gold);
             margin-bottom: 25px;
-            font-size:
+            font-size: 1.8rem;
+        }
+
+        .details-list {
+            list-style: none;
+        }
+
+        .details-list li {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 8px;
+        }
+
+        .details-list span {
+            color: var(--text-dim);
+            font-weight: 300;
+        }
+
+        .cta-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: block;
+            background-color: var(--primary-gold);
+            color: #000;
+            padding: 16px;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #d4b475;
+            transform: translateY(-2px);
+        }
+
+        .policy-section {
+            font-size: 0.95rem;
+            color: var(--text-dim);
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            background: rgba(255,255,255,0.02);
+            padding: 40px;
+            border-radius: 4px;
+        }
+
+        footer {
+            padding: 60px 0;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .contact-link {
+            color: var(--primary-gold);
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <p class="hero-date">London • 21 March 2026</p>
+            <h1>Newroz 2026</h1>
+            <p style="font-style: italic; color: var(--text-dim); letter-spacing: 1px;">A Private Cultural Celebration</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="details">
+            <div class="grid">
+                <div>
+                    <h2>The Celebration</h2>
+                    <p>Welcome the arrival of Spring at our private Newroz gathering. Held at the historic <strong>Notting Hill Arts Club</strong>, this evening is dedicated to community, tradition, and shared culture in a refined, professional setting.</p>
+                    <br>
+                    <p>To maintain an intimate and safe environment, admission is strictly limited to pre-registered guests holding a valid digital ticket.</p>
+                </div>
+                
+                <div class="card">
+                    <h2>Event Details</h2>
+                    <ul class="details-list">
+                        <li><span>Date</span> <strong>Saturday, 21 March</strong></li>
+                        <li><span>Venue</span> <strong>Notting Hill Arts Club</strong></li>
+                        <li><span>Hours</span> <strong>20:00 — 02:00</strong></li>
+                        <li><span>Admission</span> <strong>£25.00 GBP</strong></li>
+                    </ul>
+                    
+                    <div class="cta-container">
+                        <a href="#" class="btn">Secure Ticket</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="policy-section">
+            <h2 style="font-size: 1.4rem;">Terms of Purchase</h2>
+            <p><strong>General Admission:</strong> This ticket grants entry for one person to the Newroz 2026 private event. Tickets are delivered digitally via email upon successful checkout.</p>
+            <br>
+            <p><strong>Refund Policy:</strong> All ticket sales are final and non-refundable. Refunds will only be processed if the event is cancelled in its entirety by the organisers.</p>
+            <br>
+            <p><strong>Event Entry:</strong> Organisers reserve the right to refuse entry to ensure the safety of our guests. This is a private event; please have your digital confirmation ready at the door.</p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>For inquiries: <a href="mailto:events@example.com" class="contact-link">events@example.com</a></p>
+            <p style="margin-top: 15px; opacity: 0.6;">&copy; 2026 Newroz Celebration. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
