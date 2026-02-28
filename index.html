@@ -1,31 +1,271 @@
-<div class="card">
-    <h2>Event Details</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newroz 2026 | Private Celebration</title>
 
-    <ul class="details-list">
-        <li><span>Date</span> <strong>Saturday, 21 March 2026</strong></li>
-        <li><span>Time</span> <strong>20:00 — 02:00</strong></li>
-        <li><span>Venue</span> <strong>Notting Hill Arts Club</strong></li>
-        <li><span>Address</span> 
-            <strong>
-                21 Notting Hill Gate,<br>
-                London W11 3JQ
-            </strong>
-        </li>
-        <li><span>Admission</span> <strong>£25 GBP</strong></li>
-    </ul>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
-    <p style="margin-bottom:20px;">
-        Tickets are strictly limited and will not be available at the door.
-        Once capacity is reached, sales will close.
-    </p>
+<style>
+:root {
+    --bg-color: #0a0f0d;
+    --surface-color: #111716;
+    --gold: #c5a059;
+    --text-main: #eaeaea;
+    --text-dim: #a9a9a9;
+}
 
-    <a href="https://maps.app.goo.gl/tWBFJQ8oH1YKw1gA7" 
-       target="_blank" 
-       style="display:block; margin-bottom:25px; color:#c5a059; text-decoration:none; font-weight:600;">
-        View on Google Maps →
-    </a>
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-    <a href="https://buy.stripe.com/5kQ28q5ad5h569MgfX7wA00" class="btn">
-        Buy Ticket
-    </a>
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.7;
+}
+
+/* HERO */
+
+header {
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 120px;
+    background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.95) 15%,
+        rgba(0,0,0,0.65) 60%,
+        rgba(0,0,0,0.35)
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.hero-date {
+    letter-spacing: 4px;
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 7vw, 4.8rem);
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+.hero-sub {
+    font-style: italic;
+    color: #d8d8d8;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--gold);
+    color: #000;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #d8b56a;
+    transform: translateY(-2px);
+}
+
+/* MAIN */
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+}
+
+@media(max-width: 900px){
+    .grid { grid-template-columns: 1fr; }
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--gold);
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+p { margin-bottom: 18px; color: var(--text-dim); }
+
+/* CARD */
+
+.card {
+    background: var(--surface-color);
+    padding: 50px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.details-list {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.details-list li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    gap: 20px;
+}
+
+.details-list span {
+    color: var(--text-dim);
+}
+
+.details-list strong {
+    color: #fff;
+    text-align: right;
+}
+
+.map-link {
+    display: inline-block;
+    margin-bottom: 25px;
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.map-link:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 60px 0;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    color: var(--text-dim);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="hero-content">
+        <div class="hero-date">LONDON • 21 MARCH 2026</div>
+        <h1>Newroz 2026</h1>
+        <div class="hero-sub">A Private Cultural Celebration</div>
+        <a href="https://buy.stripe.com/5kQ28q5ad5h569MgfX7wA00" class="btn">
+            Secure Your Ticket – £25
+        </a>
+    </div>
+</header>
+
+<div class="container">
+    <div class="grid">
+
+        <div>
+            <h2>The Celebration</h2>
+            <p>
+              Join us to welcome the arrival of spring at an intimate Newroz celebration at Notting Hill Arts Club.
+            </p>
+            <p>
+              Expect Kurdish music throughout the night, spontaneous halparke, and a crowd bringing great energy and shared celebration.
+            </p>
+            <p>
+              This is not a commercial club night. It is a private cultural gathering.
+            </p>
+
+            <h2 style="margin-top:60px;">Music & Atmosphere</h2>
+            <p>
+              A mix of traditional Kurdish tracks and contemporary party music will carry the night from 8pm through to 2am.
+            </p>
+
+            <h2 style="margin-top:60px;">Dress</h2>
+            <p>
+              Traditional Kurdish dress is warmly encouraged, though not required. Smart evening wear is equally welcome.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Event Details</h2>
+
+            <ul class="details-list">
+                <li>
+                    <span>Date</span>
+                    <strong>Saturday, 21 March 2026</strong>
+                </li>
+                <li>
+                    <span>Time</span>
+                    <strong>20:00 — 02:00</strong>
+                </li>
+                <li>
+                    <span>Venue</span>
+                    <strong>Notting Hill Arts Club</strong>
+                </li>
+                <li>
+                    <span>Address</span>
+                    <strong>
+                        21 Notting Hill Gate,<br>
+                        London W11 3JQ
+                    </strong>
+                </li>
+                <li>
+                    <span>Admission</span>
+                    <strong>£25 GBP</strong>
+                </li>
+            </ul>
+
+            <a href="https://maps.app.goo.gl/tWBFJQ8oH1YKw1gA7"
+               target="_blank"
+               class="map-link">
+               View on Google Maps →
+            </a>
+
+            <p>
+              Tickets are strictly limited and will not be available at the door.
+              Once capacity is reached, sales will close.
+            </p>
+
+            <a href="https://buy.stripe.com/5kQ28q5ad5h569MgfX7wA00" class="btn">
+              Buy Ticket
+            </a>
+        </div>
+
+    </div>
 </div>
+
+<footer>
+    <p>For enquiries: info@newroz2026.co.uk</p>
+    <p style="margin-top:10px;">Newroz pîroz be 🌿🔥</p>
+</footer>
+
+</body>
+</html>
