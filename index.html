@@ -5,210 +5,215 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Newroz 2026 | Private Celebration</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
 <style>
+:root {
+    --bg-color: #0b1f18;
+    --surface-color: #102821;
+    --primary-green: #1f4d3c;
+    --text-main: #ffffff;
+    --text-dim: #cfcfcf;
+}
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: Georgia, serif;
-  background: #000;
-  color: #fff;
-  line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.7;
+    overflow-x: hidden;
 }
 
 /* HERO */
 
-.hero {
-  height: 100vh;
-  background: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2070&auto=format&fit=crop') center center / cover no-repeat;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding-bottom: 140px;
-  position: relative;
-  text-align: center;
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 120px;
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.25),
-    rgba(0,0,0,0.6),
-    rgba(0,0,0,0.9)
-  );
+header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(11,31,24,0.9) 0%,
+        rgba(11,31,24,0.85) 40%,
+        rgba(11,31,24,0.6) 70%,
+        rgba(11,31,24,0.4) 100%
+    );
+    z-index: 1;
 }
 
 .hero-content {
-  position: relative;
-  z-index: 2;
-  animation: fadeUp 1.2s ease forwards;
-  opacity: 0;
-  transform: translateY(20px);
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 0 20px;
 }
 
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.hero-date {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #e5e5e5;
+    margin-bottom: 15px;
 }
 
-.hero small {
-  letter-spacing: 4px;
-  font-size: 14px;
-  opacity: 0.8;
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 6vw, 4.8rem);
+    margin-bottom: 15px;
+    letter-spacing: 3px;
 }
 
-.hero h1 {
-  font-size: 72px;
-  font-weight: 500;
-  margin: 20px 0;
-  color: #d4af37;
-  text-shadow:
-    0 0 15px rgba(212,175,55,0.4),
-    0 0 30px rgba(255,120,0,0.15),
-    0 4px 20px rgba(0,0,0,0.6);
+.hero-sub {
+    font-style: italic;
+    color: #e0e0e0;
+    margin-bottom: 25px;
 }
 
-.hero p {
-  font-style: italic;
-  font-size: 20px;
-  opacity: 0.9;
+/* LAYOUT */
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* MAIN SECTION */
-
-.section {
-  padding: 100px 10%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 60px;
-  background: #0b0b0b;
+section {
+    padding: 90px 0;
 }
 
-.left {
-  flex: 1;
-  min-width: 300px;
+section.alt {
+    background: #0f2a22;
 }
 
-.left h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: #d4af37;
+h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 25px;
+    font-size: 2rem;
 }
 
-.left p {
-  font-size: 18px;
-  opacity: 0.9;
+p {
+    margin-bottom: 15px;
+    color: var(--text-dim);
 }
 
-.right {
-  flex: 1;
-  min-width: 300px;
-  background: #121212;
-  padding: 40px;
-  border: 1px solid #222;
+/* BUTTON */
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-green);
+    color: #fff;
+    padding: 16px 32px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
 }
 
-.right h3 {
-  font-size: 28px;
-  margin-bottom: 30px;
-  color: #d4af37;
-}
-
-.detail {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  font-size: 18px;
-}
-
-.payment {
-  margin-top: 40px;
-  text-align: center;
+.btn:hover {
+    background-color: #2c6b55;
+    transform: translateY(-2px);
 }
 
 /* FOOTER */
 
 footer {
-  text-align: center;
-  padding: 60px 20px;
-  background: #000;
-  font-size: 16px;
-  letter-spacing: 1px;
-  color: #d4af37;
+    padding: 60px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    border-top: 1px solid rgba(255,255,255,0.08);
 }
 </style>
-
-<script async src="https://js.stripe.com/v3/buy-button.js"></script>
-
 </head>
+
 <body>
 
-<section class="hero">
-  <div class="hero-content">
-    <small>LONDON • 21 MARCH 2026</small>
-    <h1>Newroz 2026</h1>
-    <p>A Private Cultural Celebration</p>
+<header>
+    <div class="hero-content">
+        <p class="hero-date">London • Saturday 21 March 2026</p>
+        <h1>Newroz 2026</h1>
+        <p class="hero-sub">A Private Cultural Celebration</p>
+        <a href="https://buy.stripe.com/5kQ28q5ad5h569MgfX7wA00" class="btn">
+            Secure Your Ticket – £25
+        </a>
+    </div>
+</header>
+
+<section>
+  <div class="container">
+    <h2>The Celebration</h2>
+    <p>
+      Join us to welcome the arrival of spring at an intimate Newroz celebration in one of Notting Hill’s most iconic venues.
+    </p>
+    <p>
+      Expect Kurdish music throughout the night, spontaneous halparke, and a crowd bringing great energy and shared celebration.
+    </p>
+    <p>
+      This is not a commercial club night. It is a private cultural gathering.
+    </p>
   </div>
 </section>
 
-<section class="section">
-
-  <div class="left">
-    <h2>The Celebration</h2>
+<section class="alt">
+  <div class="container">
+    <h2>Music & Atmosphere</h2>
     <p>
-      Welcome the arrival of Spring at our private Newroz gathering.
-      Held at the historic Notting Hill Arts Club, this evening is dedicated
-      to community, tradition, and halparke zor.
+      The evening will feature a mix of traditional Kurdish tracks and contemporary party music, creating space for cultural expression and pure celebration.
     </p>
-    <p style="margin-top:20px;">
-      To maintain an intimate and safe environment, admission is strictly limited to pre-registered guests.
+    <p>
+      Dancing begins early and continues through to 2am.
     </p>
   </div>
+</section>
 
-  <div class="right">
-    <h3>Event Details</h3>
-
-    <div class="detail">
-      <span>Date</span>
-      <strong>Saturday, 21 March</strong>
-    </div>
-
-    <div class="detail">
-      <span>Venue</span>
-      <strong>Notting Hill Arts Club</strong>
-    </div>
-
-    <div class="detail">
-      <span>Hours</span>
-      <strong>20:00 — 02:00</strong>
-    </div>
-
-    <div class="detail">
-      <span>Admission</span>
-      <strong>£25 GBP</strong>
-    </div>
-
-    <div class="payment">
-      <stripe-buy-button
-        buy-button-id="buy_btn_1T5ZqRCk1uDfcTRfZ4YsnO4l"
-        publishable-key="pk_live_51T2rq2Ck1uDfcTRflpEqktEH7IzdRee7VIgsV6skpPH8uXwoIHg9AbJkFCbaraBHD8aEyxnZRjEXiLhmU1fX6X1100FcWSXPat">
-      </stripe-buy-button>
-    </div>
-
+<section>
+  <div class="container">
+    <h2>Dress</h2>
+    <p>
+      Traditional Kurdish dress is warmly encouraged, but not required. Smart evening wear is equally welcome.
+    </p>
   </div>
+</section>
 
+<section class="alt">
+  <div class="container">
+    <h2>Practical Information</h2>
+    <p><strong>Venue:</strong> Notting Hill Arts Club, W11 3JQ</p>
+    <p><strong>Time:</strong> 20:00 – 02:00</p>
+    <p><strong>Tickets:</strong> £25 per person (venue hire contribution)</p>
+    <p>
+      Tickets are strictly limited and will not be available at the door.
+      Once capacity is reached, sales will close.
+    </p>
+    <a href="https://buy.stripe.com/5kQ28q5ad5h569MgfX7wA00" class="btn">Buy Ticket</a>
+  </div>
 </section>
 
 <footer>
-  Enquiries: +44 7725 861101
+    <p>For enquiries: info@newroz2026.co.uk</p>
+    <p style="margin-top:10px; opacity:0.6;">Newroz pîroz be 🌿🔥</p>
 </footer>
 
 </body>
